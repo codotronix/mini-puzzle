@@ -1,0 +1,26 @@
+#board1
+{
+	height: 231px;
+	width: 231px;
+	box-sizing: content-box;
+	border: 1px solid red;
+	position: relative;
+	margin: 20px 100px;
+}
+
+.cell
+{
+	height: 77px;
+	width: 77px;
+	box-sizing: border-box;
+	border: 1px solid blue;
+	position: absolute;
+	overflow: hidden;
+}
+
+input[type=button]
+{
+	height:30px;
+	width:100px;
+	margin-left: 80px;
+}

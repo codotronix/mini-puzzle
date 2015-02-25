@@ -1,17 +1,114 @@
+section
+{
+	display: block;
+	box-sizing: border-box;
+}
+
+#optionsPanel
+{
+	position: absolute;
+	color: #FFF;
+	background: #F00;
+	font-size: 24px;
+	padding: 10px;
+	z-index: 1;
+}
+
+#optionsPanel ul li
+{
+	list-style: none;
+}
+
+#optionsPanel:hover ul
+{
+	display: block;
+}
+
+#optionsPanel ul
+{
+	display: none;
+	padding: 20px;
+}
+
+#doneOptions
+{
+	display: none;
+	margin-left: 70px;
+}
+
+#optionsPanel:hover #doneOptions
+{
+	display: block;
+}
+
 #board1
 {
-	height: 231px;
-	width: 231px;
+	/*height: 231px;
+	width: 231px;*/
 	box-sizing: content-box;
 	border: 1px solid red;
 	position: relative;
-	margin: 20px 100px;
+	margin: 20px 0 30px 100px;
+	float: left;
+}
+
+#secScoreBoard
+{
+	margin: 20px 0 50px 50px;
+	float: left;
+	border: 1px dotted orange;
+	padding: 10px;
+	font-size: 20px;
+	position: relative;
+}
+
+#imageHolder
+{
+	margin: 20px 0 50px 50px;
+	float: left;
+	text-align: center;
+	position: relative;
+	border: 1px dotted red;
+	display: table;
+}
+
+#imageHolder:hover
+{
+	border: none;
+}
+
+
+#imageHolder img
+{
+	display: none;
+}
+
+#imageHolder:hover img
+{
+	display: block;
+}
+
+#imageHolder span
+{
+	font-size: 20px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#imageHolder:hover span
+{
+	display: none;
+}
+
+#secButton
+{
+	clear: both;
 }
 
 .cell
 {
-	height: 77px;
-	width: 77px;
+	/*height: 77px;
+	width: 77px;*/
 	box-sizing: border-box;
 	border: 1px solid blue;
 	position: absolute;
@@ -20,7 +117,44 @@
 
 input[type=button]
 {
-	height:30px;
-	width:100px;
-	margin-left: 80px;
+	/*height:30px;*/
+	/*width:100px;*/
+	background: #2DF;
+	font-size: 18px;
+}
+
+input[type=button]:hover
+{
+	background: #2F3;
+}
+
+#Shuffle
+{
+	margin: 0 0 0 100px;
+}
+
+#Solve
+{
+	margin: 0 0 0 20px;
+}
+
+#resetCounter
+{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+
+#startTimer
+{
+	position: absolute;
+	bottom: 50px;
+	left: 10px;
+}
+
+#stopTimer
+{
+	position: absolute;
+	bottom: 50px;
+	right: 10px;
 }

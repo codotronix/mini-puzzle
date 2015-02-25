@@ -5,11 +5,42 @@
 	<link rel="stylesheet" type="text/css" href="style\style.css"/>
 </head>
 	<body>
+
+		<section id="optionsPanel">
+			Options			
+			<ul id="selectLevel">
+				Select Level
+				<li><label><input type="radio" value="3" name="levelSelector" checked/> Level 1 (3x3)</label></li>
+				<li><label><input type="radio" value="4" name="levelSelector"/> Level 2 (4x4)</label></li>
+				<li><label><input type="radio" value="5" name="levelSelector"/> Level 3 (5x5)</label></li>
+				<li><label><input type="radio" value="6" name="levelSelector"/> Level 4 (6x6)</label></li>
+			</ul>
+			<input type="button" id="doneOptions" value="Done" />
+		</section>
+
+		<!-- This is contain the actual game... This is The Board -->
 		<div id="board1"></div>
 
-		<br/><br/>
-		<input type="button" id="Shuffle" value="Shuffle Up" />
-		<input type="button" id="Solve" value="Solve" />
+		<!-- This container will show the image if a user wants to see it -->		
+		<section id="imageHolder">
+			<span>HOVER TO SEE THE COMPLETE PICTURE</span>
+			<img id="puzzleImg" src="images/puzzle.jpg" />
+		</section>
+
+		<section id="secScoreBoard">
+			Total Move : <span id="totalMove">0</span>
+			<br/>
+			Total Time (sec) : <span id="totalTime">0</span>
+			<input type="button" id="startTimer" value="Timer On" />
+			<input type="button" id="stopTimer" value="Timer Off" />
+			<input type="button" id="resetCounter" value="Reset" />
+		</section>
+
+		<!-- The Buttons -->
+		<section id="secButton">
+			<input type="button" id="Shuffle" value="Shuffle" />
+			<input type="button" id="Solve" value="Solve" />
+		</section>
 
 		<script type="text/javascript" src="script\jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="script\script.js"></script>	

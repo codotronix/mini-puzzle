@@ -3,7 +3,7 @@ $(function(){
 	
 	// NOTE: I have started the Cell Array from 1... Hence the 0th location is blank
 
-	var imageWidth = $('#puzzleImg').height();
+	var imageWidth = 240	//	$('#puzzleImg').height(); Since I have decided to take only 240x240 size image, So can be hard coded
 	var cells = [];			//an array of cell bojects to hold information about all the cells
 	var m = 3; 				// say it is a m x m square puzzle
 	var diffFactor = imageWidth/m; 	//total width of teh borad divided by number of cell in each line i.e 231/3 = 77
@@ -11,6 +11,7 @@ $(function(){
 	var totalMove = 0; 
 	var totalTime = 0;
 	var timerOn = false;
+	var imageUrl = 'images/1.jpg';
 	
 	
 	//set height and width of all necessary components
@@ -22,10 +23,13 @@ $(function(){
 		height: imageWidth + 'px',
 		width: imageWidth + 'px'
 	});
+
+	/*
 	$('#secScoreBoard').css({
 		height: imageWidth + 'px',
 		width: imageWidth +'px'
 	});
+	*/
 
 	//console.log(diffFactor);
 	$('.cell').css({
@@ -52,7 +56,7 @@ $(function(){
 				$('#'+cells[cellNo].id).css({
 					top : cells[cellNo].top + 'px',
 					left : cells[cellNo].left + 'px',
-					background: "url('images/puzzle.jpg') no-repeat -" + cells[cellNo].left + "px -" + cells[cellNo].top + "px"
+					background: "url(" + imageUrl + ") no-repeat -" + cells[cellNo].left + "px -" + cells[cellNo].top + "px"
 				});
 			}
 		}
@@ -68,7 +72,12 @@ $(function(){
 		$('#'+blankCellId).css('background-image','none');
 	}	
 
-	function init() {
+	function init() {		
+		totalMove = 0;
+		$('#totalMove').html(totalMove);
+		timerOn = false;
+		totalTime = 0;
+		$('#totalTime').html(totalTime);
 		initBoard();
 	}
 
@@ -97,7 +106,7 @@ $(function(){
 	}
 
 	function shuffleUp () {
-		totalMove = 0;
+		//totalMove = 0;
 		var maxCellIndex = cells.length-1;
 		var swapCount = 0;
 		while (swapCount < 300)	{
@@ -106,7 +115,7 @@ $(function(){
 				swapCount++;
 			}
 		}
-		$('#totalMove').html(totalMove);
+		//$('#totalMove').html(totalMove);
 	}
 
 	function increaseTime () {
@@ -133,6 +142,7 @@ $(function(){
 	//Shuffle button is clicked
 	$('#Shuffle').click(function(){
 		shuffleUp();
+		totalMove = 0;
 	});
 
 	//Reset Counter button is pressed
@@ -164,10 +174,19 @@ $(function(){
 	});
 
 	//doneOptions button is clicked
-	$('#doneOptions').click(function () {
+	$('#selectLevel input[type=radio]').on('change', function () {
 		m = parseInt($('#selectLevel input[type=radio]:checked').val());
 		diffFactor = imageWidth/m;
 		$('#board1').html('');
-		init();	
+		init();
+	})
+
+	//
+	$('#selectImage li img').on('click', function () {
+		//console.log($(this).attr('src'));
+		imageUrl = $(this).attr('src');
+		$('#imageHolder img').attr('src', imageUrl);
+		$('#board1').html('');
+		init();
 	});
 });

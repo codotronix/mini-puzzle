@@ -1,17 +1,36 @@
+body
+{
+	background: #1d1f20;
+	color: #FFF;
+}
 section
 {
 	display: block;
 	box-sizing: border-box;
 }
 
+#gameTitle
+{
+	position: absolute;
+	top: 0;
+	left: 160px;
+	text-decoration: underline;
+	color: #A8A8FF;
+}
+
 #optionsPanel
 {
 	position: absolute;
 	color: #FFF;
-	background: #F00;
+	background: linear-gradient(#4d4d4d, #2f2f2f);
 	font-size: 24px;
 	padding: 10px;
 	z-index: 1;
+}
+
+#optionsPanel:hover
+{
+	width: 257px;
 }
 
 #optionsPanel ul li
@@ -27,7 +46,27 @@ section
 #optionsPanel ul
 {
 	display: none;
-	padding: 20px;
+	padding: 0 20px;
+}
+
+#selectImage li
+{
+	float: left;
+	margin: 5px 5px;
+	height: 55px;
+	width: 55px;
+	box-sizing: border-box;
+}
+
+#selectImage li:hover
+{
+	border: 1px solid #FFF200;
+}
+
+#selectImage li img
+{
+	height: 55px;
+	width: 55px;	
 }
 
 #doneOptions
@@ -41,30 +80,40 @@ section
 	display: block;
 }
 
+#boardContainer
+{
+	float: left;
+	margin: 85px 0 20px 115px;
+}
+
 #board1
 {
 	/*height: 231px;
 	width: 231px;*/
 	box-sizing: content-box;
-	border: 1px solid red;
+	border: 4px outset #B5B5B5;
 	position: relative;
-	margin: 20px 0 30px 100px;
 	float: left;
+	background: #747373;
+	margin: 0 0 20px 0;
 }
 
 #secScoreBoard
 {
-	margin: 20px 0 50px 50px;
-	float: left;
-	border: 1px dotted orange;
+	/*margin: 20px 0 50px 50px;*/
+	/*float: left;*/
+	/*border: 1px dotted orange;*/
 	padding: 10px;
-	font-size: 20px;
-	position: relative;
+	text-align: center;
+	font-size: 21px;
+	position: absolute;
+	top: 93px;
+	left: 0;
 }
 
 #imageHolder
 {
-	margin: 20px 0 50px 50px;
+	margin: 85px 0 50px 40px;
 	float: left;
 	text-align: center;
 	position: relative;
@@ -102,7 +151,7 @@ section
 
 #secButton
 {
-	clear: both;
+
 }
 
 .cell
@@ -110,51 +159,41 @@ section
 	/*height: 77px;
 	width: 77px;*/
 	box-sizing: border-box;
-	border: 1px solid blue;
+	border: 1px solid #000;
 	position: absolute;
 	overflow: hidden;
 }
 
 input[type=button]
-{
-	/*height:30px;*/
-	/*width:100px;*/
-	background: #2DF;
-	font-size: 18px;
+{	
+	background: #4D4D4D;
+	color: #FFF;
+	font-size: 17px;
+	border-radius: 3px;
+	border-color: #646464;
+	padding: 3px 5px;
+	margin-top: 5px;
 }
 
 input[type=button]:hover
 {
-	background: #2F3;
+	background: #767676;
 }
 
 #Shuffle
 {
-	margin: 0 0 0 100px;
+	width: 120px;
 }
 
 #Solve
 {
-	margin: 0 0 0 20px;
+	width: 120px;
 }
 
-#resetCounter
+@media (max-width: 680px)
 {
-	position: absolute;
-	bottom: 10px;
-	left: 10px;
-}
-
-#startTimer
-{
-	position: absolute;
-	bottom: 50px;
-	left: 10px;
-}
-
-#stopTimer
-{
-	position: absolute;
-	bottom: 50px;
-	right: 10px;
+	#imageHolder
+	{
+		margin: 20px 0 0 115px;
+	}
 }

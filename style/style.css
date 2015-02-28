@@ -30,7 +30,7 @@ section
 
 #optionsPanel:hover
 {
-	width: 257px;
+	/*width: 257px;*/
 }
 
 #optionsPanel ul li
@@ -38,14 +38,25 @@ section
 	list-style: none;
 }
 
+#AllOptions
+{
+	width: 257px;
+	display: none;
+}
+
+#optionsPanel:hover #AllOptions
+{
+	/*display: block;*/
+}
+
 #optionsPanel:hover ul
 {
-	display: block;
+	/*display: block;*/
 }
 
 #optionsPanel ul
 {
-	display: none;
+	/*display: none;*/
 	padding: 0 20px;
 }
 
@@ -69,16 +80,6 @@ section
 	width: 55px;	
 }
 
-#doneOptions
-{
-	display: none;
-	margin-left: 70px;
-}
-
-#optionsPanel:hover #doneOptions
-{
-	display: block;
-}
 
 #boardContainer
 {
@@ -118,7 +119,7 @@ section
 	float: left;
 	text-align: center;
 	position: relative;
-	border: 1px dotted red;
+	/*border: 1px dotted red;*/
 	display: table;
 }
 
@@ -135,7 +136,7 @@ section
 
 #imageHolder:hover img
 {
-	display: block;
+	/*display: block;*/
 }
 
 #imageHolder span
@@ -143,16 +144,12 @@ section
 	font-size: 20px;
 	display: table-cell;
 	vertical-align: middle;
+	border: 1px dotted red;
 }
 
 #imageHolder:hover span
 {
-	display: none;
-}
-
-#secButton
-{
-
+	/*display: none;*/
 }
 
 .cell

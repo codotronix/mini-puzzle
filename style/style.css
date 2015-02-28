@@ -1,0 +1,200 @@
+body
+{
+	background: #1d1f20;
+	color: #FFF;
+}
+section
+{
+	display: block;
+	box-sizing: border-box;
+}
+
+#gameTitle
+{
+	position: absolute;
+	top: 0;
+	left: 160px;
+	text-decoration: underline;
+	color: #A8A8FF;
+}
+
+#optionsPanel
+{
+	position: absolute;
+	color: #FFF;
+	background: linear-gradient(#4d4d4d, #2f2f2f);
+	font-size: 24px;
+	padding: 10px;
+	z-index: 1;
+}
+
+#optionsPanel:hover
+{
+	width: 257px;
+}
+
+#optionsPanel ul li
+{
+	list-style: none;
+}
+
+#optionsPanel:hover ul
+{
+	display: block;
+}
+
+#optionsPanel ul
+{
+	display: none;
+	padding: 0 20px;
+}
+
+#selectImage li
+{
+	float: left;
+	margin: 5px 5px;
+	height: 55px;
+	width: 55px;
+	box-sizing: border-box;
+}
+
+#selectImage li:hover
+{
+	border: 1px solid #FFF200;
+}
+
+#selectImage li img
+{
+	height: 55px;
+	width: 55px;	
+}
+
+#doneOptions
+{
+	display: none;
+	margin-left: 70px;
+}
+
+#optionsPanel:hover #doneOptions
+{
+	display: block;
+}
+
+#boardContainer
+{
+	width: 250px;
+	float: left;
+	margin: 85px 0 20px 115px;
+}
+
+#board1
+{
+	/*height: 231px;
+	width: 231px;*/
+	box-sizing: content-box;
+	border: 4px outset #B5B5B5;
+	position: relative;
+	float: left;
+	background: #747373;
+	margin: 0 0 20px 0;
+}
+
+#secScoreBoard
+{
+	/*margin: 20px 0 50px 50px;*/
+	/*float: left;*/
+	/*border: 1px dotted orange;*/
+	padding: 10px;
+	text-align: center;
+	font-size: 21px;
+	position: absolute;
+	top: 93px;
+	left: 0;
+}
+
+#imageHolder
+{
+	margin: 85px 0 50px 40px;
+	float: left;
+	text-align: center;
+	position: relative;
+	border: 1px dotted red;
+	display: table;
+}
+
+#imageHolder:hover
+{
+	border: none;
+}
+
+
+#imageHolder img
+{
+	display: none;
+}
+
+#imageHolder:hover img
+{
+	display: block;
+}
+
+#imageHolder span
+{
+	font-size: 20px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#imageHolder:hover span
+{
+	display: none;
+}
+
+#secButton
+{
+
+}
+
+.cell
+{
+	/*height: 77px;
+	width: 77px;*/
+	box-sizing: border-box;
+	border: 1px solid #000;
+	position: absolute;
+	overflow: hidden;
+}
+
+input[type=button]
+{	
+	background: #4D4D4D;
+	color: #FFF;
+	font-size: 17px;
+	border-radius: 3px;
+	border-color: #646464;
+	padding: 3px 5px;
+	margin-top: 5px;
+}
+
+input[type=button]:hover
+{
+	background: #767676;
+}
+
+#Shuffle
+{
+	width: 120px;
+}
+
+#Solve
+{
+	width: 120px;
+}
+
+@media (max-width: 680px)
+{
+	#imageHolder
+	{
+		margin: 20px 0 0 115px;
+	}
+}

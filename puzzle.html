@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style\style.css"/>
+</head>
+	<body>
+		<h1 id="gameTitle">Mini Puzzle</h1>
+		<section id="optionsPanel">
+			Options			
+			<ul id="selectLevel">
+				Select Level
+				<li><label><input type="radio" class="levelSelector" value="3" name="levelSelector" checked/> Level 1 (3x3)</label></li>
+				<li><label><input type="radio" class="levelSelector" value="4" name="levelSelector"/> Level 2 (4x4)</label></li>
+				<li><label><input type="radio" class="levelSelector" value="5" name="levelSelector"/> Level 3 (5x5)</label></li>
+				<li><label><input type="radio" class="levelSelector" value="6" name="levelSelector"/> Level 4 (6x6)</label></li>
+			</ul>
+			<ul id="selectImage">
+				Select Image <br>
+				<li><img src="images/1.jpg"/></li>
+				<li><img src="images/2.jpg"/></li>
+				<li><img src="images/3.jpg"/></li>
+				<li><img src="images/4.jpg"/></li>
+				<li><img src="images/6.jpg"/></li>
+				<li><img src="images/8.jpg"/></li>
+				<li><img src="images/9.jpg"/></li>
+			</ul>
+			<!--<input type="button" id="doneOptions" value="Done" />-->
+		</section>
+
+		
+		<div id="boardContainer">
+			<!-- This is contain the actual game... This is The Board -->
+			<div id="board1"></div>
+
+			<!-- The Buttons -->
+			<section id="secButton">
+				<input type="button" id="Shuffle" value="Shuffle" />
+				<input type="button" id="Solve" value="Solve" />
+			</section>
+		</div>
+
+		<!-- This container will show the image if a user wants to see it -->		
+		<section id="imageHolder">
+			<span>HOVER TO SEE THE COMPLETE PICTURE</span>
+			<img id="puzzleImg" src="images/1.jpg" />
+		</section>
+
+		<section id="secScoreBoard">
+			Move <br/>
+			<span id="totalMove">0</span> <br/>			
+			Time (sec) <br/>
+			<span id="totalTime">0</span> <br/><br/>
+			<input type="button" id="startTimer" value="Timer On " /> <br/>
+			<input type="button" id="stopTimer" value="Timer Off " /> <br/>
+			<input type="button" id="resetCounter" value="Reset All " /> <br/>
+		</section>
+
+		
+
+		<script type="text/javascript" src="script\jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="script\script.js"></script>	
+	</body>
+</html>

@@ -82,6 +82,7 @@ section
 
 #boardContainer
 {
+	width: 250px;
 	float: left;
 	margin: 85px 0 20px 115px;
 }

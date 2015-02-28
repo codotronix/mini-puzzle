@@ -22,6 +22,7 @@ section
 {
 	position: absolute;
 	color: #FFF;
+	background: #4d4d4d;
 	background: linear-gradient(#4d4d4d, #2f2f2f);
 	font-size: 24px;
 	padding: 10px;

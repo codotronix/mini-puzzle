@@ -7,24 +7,26 @@
 	<body>
 		<h1 id="gameTitle">Mini Puzzle</h1>
 		<section id="optionsPanel">
-			Options			
-			<ul id="selectLevel">
-				Select Level
-				<li><label><input type="radio" class="levelSelector" value="3" name="levelSelector" checked/> Level 1 (3x3)</label></li>
-				<li><label><input type="radio" class="levelSelector" value="4" name="levelSelector"/> Level 2 (4x4)</label></li>
-				<li><label><input type="radio" class="levelSelector" value="5" name="levelSelector"/> Level 3 (5x5)</label></li>
-				<li><label><input type="radio" class="levelSelector" value="6" name="levelSelector"/> Level 4 (6x6)</label></li>
-			</ul>
-			<ul id="selectImage">
-				Select Image <br>
-				<li><img src="images/1.jpg"/></li>
-				<li><img src="images/2.jpg"/></li>
-				<li><img src="images/3.jpg"/></li>
-				<li><img src="images/4.jpg"/></li>
-				<li><img src="images/6.jpg"/></li>
-				<li><img src="images/8.jpg"/></li>
-				<li><img src="images/9.jpg"/></li>
-			</ul>
+			Options
+			<div id="AllOptions">			
+				<ul id="selectLevel">
+					Select Level
+					<li><label><input type="radio" class="levelSelector" value="3" name="levelSelector" checked/> Level 1 (3x3)</label></li>
+					<li><label><input type="radio" class="levelSelector" value="4" name="levelSelector"/> Level 2 (4x4)</label></li>
+					<li><label><input type="radio" class="levelSelector" value="5" name="levelSelector"/> Level 3 (5x5)</label></li>
+					<li><label><input type="radio" class="levelSelector" value="6" name="levelSelector"/> Level 4 (6x6)</label></li>
+				</ul>
+				<ul id="selectImage">
+					Select Image <br>
+					<li><img src="images/1.jpg"/></li>
+					<li><img src="images/2.jpg"/></li>
+					<li><img src="images/3.jpg"/></li>
+					<li><img src="images/4.jpg"/></li>
+					<li><img src="images/6.jpg"/></li>
+					<li><img src="images/8.jpg"/></li>
+					<li><img src="images/9.jpg"/></li>
+				</ul>
+			</div>
 			<!--<input type="button" id="doneOptions" value="Done" />-->
 		</section>
 
@@ -42,7 +44,7 @@
 
 		<!-- This container will show the image if a user wants to see it -->		
 		<section id="imageHolder">
-			<span>HOVER TO SEE THE COMPLETE PICTURE</span>
+			<span>CLICK TO SEE THE COMPLETE PICTURE</span>
 			<img id="puzzleImg" src="images/1.jpg" />
 		</section>
 

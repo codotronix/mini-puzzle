@@ -189,4 +189,25 @@ $(function(){
 		$('#board1').html('');
 		init();
 	});
+
+	//#optionsPanel is clicked
+	$('#optionsPanel').click(function (e) {
+		e.stopPropagation();
+		$('#AllOptions').toggle();
+	});
+
+	$('html').click(function () {
+		console.log('body clicked');
+		$('#AllOptions').hide();
+		$('#imageHolder img').hide();
+		$('#imageHolder span').show();
+	});
+
+	//imageHolder is clicked
+	$('#imageHolder').click(function (e) {
+		e.stopPropagation();
+		$('#imageHolder img').toggle();
+		$('#imageHolder span').toggle();
+	});
+
 });

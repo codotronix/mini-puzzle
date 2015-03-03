@@ -29,11 +29,6 @@ section
 	z-index: 1;
 }
 
-#optionsPanel:hover
-{
-	/*width: 257px;*/
-}
-
 #optionsPanel ul li
 {
 	list-style: none;
@@ -45,19 +40,8 @@ section
 	display: none;
 }
 
-#optionsPanel:hover #AllOptions
-{
-	/*display: block;*/
-}
-
-#optionsPanel:hover ul
-{
-	/*display: block;*/
-}
-
 #optionsPanel ul
 {
-	/*display: none;*/
 	padding: 0 20px;
 }
 
@@ -91,8 +75,6 @@ section
 
 #board1
 {
-	/*height: 231px;
-	width: 231px;*/
 	box-sizing: content-box;
 	border: 4px outset #B5B5B5;
 	position: relative;
@@ -103,9 +85,6 @@ section
 
 #secScoreBoard
 {
-	/*margin: 20px 0 50px 50px;*/
-	/*float: left;*/
-	/*border: 1px dotted orange;*/
 	padding: 10px;
 	text-align: center;
 	font-size: 21px;
@@ -120,7 +99,6 @@ section
 	float: left;
 	text-align: center;
 	position: relative;
-	/*border: 1px dotted red;*/
 	display: table;
 }
 
@@ -135,11 +113,6 @@ section
 	display: none;
 }
 
-#imageHolder:hover img
-{
-	/*display: block;*/
-}
-
 #imageHolder span
 {
 	font-size: 20px;
@@ -148,15 +121,8 @@ section
 	border: 1px dotted red;
 }
 
-#imageHolder:hover span
-{
-	/*display: none;*/
-}
-
 .cell
 {
-	/*height: 77px;
-	width: 77px;*/
 	box-sizing: border-box;
 	border: 1px solid #000;
 	position: absolute;
